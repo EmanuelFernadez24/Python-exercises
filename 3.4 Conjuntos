@@ -1,0 +1,460 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "22c2c1ba",
+   "metadata": {},
+   "source": [
+    "# 3.4 CONJUNTOS "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0ad7ba11",
+   "metadata": {},
+   "source": [
+    "## Los conjuntos son colecciones de datos que nos facilitan ciertas operaciones ya que solo contienen valores unicos \n",
+    "\n",
+    "### Se diferencian de las tuplas y listas en que \n",
+    "        . Cada elemento dentro del conjunto es único\n",
+    "        . Sus elementos no estan ordenados \n",
+    "        "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "af02a600",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "conjunto_vacio = set()\n",
+    "conjunto={1,2,3}\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "5edfc261",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'set'> {1, 2, 3}\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(type(conjunto_vacio),conjunto)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2e86bb94",
+   "metadata": {},
+   "source": [
+    "## Metodo"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1d67d6f2",
+   "metadata": {},
+   "source": [
+    "El metodo add()nos permite agregar elementos al conjunto "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "d7548771",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1, 2, 3, 4, 5, 6, 7, 'A', 'C', 'E', 'P'}"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "conjunto.add(4)\n",
+    "conjunto.add(5)\n",
+    "conjunto.add(6)\n",
+    "conjunto.add(7)\n",
+    "conjunto.add(\"C\")\n",
+    "conjunto.add(\"A\")\n",
+    "conjunto.add(\"P\")\n",
+    "conjunto.add(\"E\")\n",
+    "conjunto \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "623c8e90",
+   "metadata": {},
+   "source": [
+    "No podemos añadir elementos que estan repetidos en los conjuntos porque sus elementos son unicos e irrepetibles"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "3dd17985",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "conjunto.add(\"C\")\n",
+    "conjunto.add(\"A\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "49974297",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{1, 2, 3, 4, 5, 6, 7, 'C', 'A', 'P', 'E'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(conjunto)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f2bf7484",
+   "metadata": {},
+   "source": [
+    "### Podemos utilizar los conjuntos para verificar la pertenencia "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "aa8b5dc7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "grupo={\"Luis\", \"Guille\", \"Victor\", \"Esteban\",\"Emanuel\"}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "4ffb1431",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'Emanuel', 'Esteban', 'Guille', 'Luis', 'Victor'}"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "grupo"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "3efe40c5",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "\"Emanuel\" in grupo"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "fe22f4b4",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "\"Guille\" in grupo"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5928e0c5",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "997fcca7",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "\"Fernanda\" not in grupo"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "085531d9",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "False"
+      ]
+     },
+     "execution_count": 16,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "\"Emanuel\" not in grupo"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d9cf60a4",
+   "metadata": {},
+   "source": [
+    "Un conjunto elimina los elementos duplicados "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "89a1cc29",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "grupo_carros = {\"Toyota\", \"Toyota\", \"Ford\", \"Renault\", \"Renault\"}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "98474319",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'Ford', 'Renault', 'Toyota'}"
+      ]
+     },
+     "execution_count": 18,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "grupo_carros"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "67b0592b",
+   "metadata": {},
+   "source": [
+    "Gracias a esta propiedad es que podemos convertir una lista en un conjunto para eliminar duplicados facilmente "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "78ed16ec",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 44, 44, 4, 4, 4, 4, 4, 4, 4, 5, 55, 5, 5, 5, 5, 5, 5]\n"
+     ]
+    }
+   ],
+   "source": [
+    "extra=[1,1,1,1,1,2,2,2,2,3,3,3,3,44,44,4,4,4,4,4,4,4,5,55,5,5,5,5,5,5]\n",
+    "print(extra)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "b6981030",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{1, 2, 3, 4, 5, 44, 55}\n"
+     ]
+    }
+   ],
+   "source": [
+    "c = set(extra)\n",
+    "print(c)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "c8beb80d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 2, 3, 4, 5, 44, 55]"
+      ]
+     },
+     "execution_count": 27,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "lista=list(c)\n",
+    "lista"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9595ffe9",
+   "metadata": {},
+   "source": [
+    "Este es un metodo ineficiente pero existe uno mas eficiente"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "caee2c1a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 4, 5, 44, 55]\n"
+     ]
+    }
+   ],
+   "source": [
+    "no_duplicados=list(set(extra))\n",
+    "print(no_duplicados)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fca9bf16",
+   "metadata": {},
+   "source": [
+    "Cuando aplicamos la conversion a una cadena, el conjunto  resultante incluye solo letras unicas de esta"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "c92d248d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'J', 'a', 'c', 'd', 'e', 'f', 'h', 'l', 'm', 'n', 'o', 'p', 'r', 't', 'u'}"
+      ]
+     },
+     "execution_count": 30,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "cadena='Jefechupamelalatenereadentro'\n",
+    "set(cadena)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "46f9887c",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
